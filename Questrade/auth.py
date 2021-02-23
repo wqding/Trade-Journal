@@ -32,7 +32,7 @@ def update_dotenv(dotenv_path, new_refresh_token, access_token, api_server):
 def get_access_token(dotenv_path):
     QUESTRADE_AUTH_BASEURL = os.environ.get('QUESTRADE_AUTH_BASEURL')
     QUESTRADE_REFRESH_TOKEN = os.environ.get('QUESTRADE_REFRESH_TOKEN')
-       
+    
     auth_url = f"{QUESTRADE_AUTH_BASEURL}?grant_type=refresh_token&refresh_token={QUESTRADE_REFRESH_TOKEN}"
     
     try:

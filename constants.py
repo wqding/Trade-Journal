@@ -1,0 +1,2 @@
+PLATFORM_QUESTRADE = "questrade"
+PLATFORM_WEALTHSIMPLE = "wealthsimple"
