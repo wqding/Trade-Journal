@@ -52,7 +52,7 @@ def add_wealthsimple_executions(tradersync_token, dotenv_path):
             res = t_action.add_executions_to_tradersync(executions, tradersync_token, constants.PLATFORM_WEALTHSIMPLE, isCrypto=True)
         else:
             res = t_action.add_executions_to_tradersync(executions, tradersync_token, constants.PLATFORM_WEALTHSIMPLE, isCrypto=False)
-        if res.status_code != 200:
+        if res.status_code >= 300:
             print("failed:", res.text)
             print("failed to add executions:", res.request.body)
 

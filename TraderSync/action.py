@@ -93,6 +93,8 @@ def add_executions_to_tradersync(executions, tradersync_token, platform, isCrypt
     add_execution_headers = {
             "Content-Type": "application/json",
             "Host": os.environ.get('TRADERSYNC_HOST'),
+            "Client": "web",
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:85.0) Gecko/20100101 Firefox/85.0",
             "token": tradersync_token,
         }
     
